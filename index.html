@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" 
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" 
+    crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    crossorigin="anonymous"></script> 
+<script src="js/produtoService.js"></script>
+<script src="js/estabelecimentoService.js"></script>
+<script src="js/util.js"></script>
+
+<!-- Avisando ao navegador sobre responsividade -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /Avisando ao navegador sobre responsividade -->
+
+<title>BAR GENIUS</title>
+</head>
+<body>
+    <input id="mostrar" value="false" type="hidden">
+    <div class="container text-center">
+        <h1>Bar Genius</h1>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>PRODUTOS</h3>
+                <div class="retorno">                     
+            
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button class="produtos btn btn-default">Exibir produtos</button>       
+                <button class="novoProduto btn btn-default">Novo produto</button></body>        
+            </div>
+            <div class="panel-body formNovoProduto" style="display:none">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <label for="nome" class="control-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Nome do produto...">
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="descricao" class="control-label">Descrição</label>
+                            <input type="text" class="form-control" id="descricao" placeholder="Descrição do produto...">
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="valor" class="control-label">Valor</label>                        
+                            <input type="text" class="form-control" id="valor" placeholder="Valor do produto...">
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="categoria" class="control-label">Categoria</label>                        
+                            <input type="text" class="form-control" id="categoria" placeholder="Categoria do produto...">
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="estabelecimento">Estabelecimento</label>
+                            <select class="form-control" id="estabelecimento">
+                              <option>Selecione</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                        <button type="submit" class="addprodutos btn btn-default">Cadastrar Produto</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>        
+    </div>    
+</html>
