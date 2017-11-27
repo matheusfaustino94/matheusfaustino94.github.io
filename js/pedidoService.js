@@ -25,22 +25,22 @@ $(document).ready(function(){
 
 // ADD NOVO PEDIDO
 $(document).ready(function(){
-    $(".addprodutos").click(function(){
+    $(".addpedido").click(function(){
         var today = new Date;
         var id = today.getHours()+""+today.getMinutes()+""+today.getSeconds();
         $.post(
-            "https://projeto-aeso.herokuapp.com/api/produtos",
+            "https://projeto-aeso.herokuapp.com/api/pedidos",
             {
-                codigoProduto:"PRD"+id,
-                nomeProduto:$('#nome').val(),
-                descricaoProduto:$('#descricao').val(),
-                valorProduto:$('#valor').val(),
-                categoria:$('#categoria').val(),
-                estabelecimento_id:$('#estabelecimento').val(),
-                itens:$('#descricao').val()
+                codigoPedido:"PD"+id,
+                statusPedido:'SOLICITADO',
+                mesaPedido:$('#mesaPedido').val(),
+                totalPedido:40,
+                __v:'',
+                usuarioPedido:[{"codigoUsuario":"USER-1","nomeUsuario":"Pedro Gomes","loginUsuario":"pgomes22@email.com","senhaUsuario":"Passwd@1231","tipoUsuario":"ADMIN","statusUsuario":"ATIVO","_id":"5a11c619f724ca1f1c2f9074"}],
+                itensPedido:[{"codigoProduto":"PD02","nomeProduto":"Whopper","descricaoProduto":"Whopper Furioso","valorProduto":19,"categoria":"Lanches","_id":"5a11c619f724ca1f1c2f9075","itens":["Pao","Hamburguer","Cebola Furiosa"]}]
             }, 
             function(returnedData){
-                if (window.confirm('Uhu... Produto cadastrado com sucesso!')){
+                if (window.confirm('Uhu... Pedido cadastrado com sucesso!')){
                     location.reload();
                 } else {
                     location.reload();
@@ -59,7 +59,7 @@ function deletePedido(id){
     $.ajax({
         url: url,
         type: 'DELETE',
-        success: function(){
+        success: function(){            
             if (window.confirm('Pedido excluído com sucesso!'))
             { location.reload() }
             else

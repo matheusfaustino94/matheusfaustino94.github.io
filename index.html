@@ -17,7 +17,8 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.cs
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
     crossorigin="anonymous"></script> 
 
-    
+
+<script src="js/bootbox.min.js"></script>
 <script src="js/produtoService.js"></script>
 <script src="js/estabelecimentoService.js"></script>
 <script src="js/pedidoService.js"></script>
@@ -42,7 +43,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.cs
             </div>
             <div class="panel-footer">
                 <button class="produtos btn btn-default">Exibir produtos</button>       
-                <button class="novoProduto btn btn-default">Novo produto</button></body>        
+                <button class="novoProduto btn btn-default" disabled>Novo produto</button></body>        
             </div>
             <div class="panel-body formNovoProduto" style="display:none">
                 <form class="form-horizontal">
@@ -93,19 +94,17 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.cs
                 <form class="form-horizontal">
                     <div class="form-group">
                         <div class="col-xs-6">
-                            <label for="nome" class="control-label">Nome</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Nome do produto...">
+                            <label for="mesaPedido" class="control-label">Mesa</label>
+                            <input type="text" class="form-control" id="mesaPedido" placeholder="Em qual mesa você está ?">
                         </div>
                         <div class="col-xs-6">
-                            <label for="estabelecimento">Estabelecimento</label>
-                            <select class="form-control" id="estabelecimento">
-                              <option>Selecione</option>
-                            </select>
+                            <label for="statusPedido" class="control-label">Status</label>
+                            <input type="text" class="form-control" id="statusPedido" disabled value="SOLICITANDO...">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                        <button type="submit" class="addprodutos btn btn-default">Cadastrar Produto</button>
+                        <button type="submit" class="addpedido btn btn-default">Cadastrar Pedido</button>
                         </div>
                     </div>
                 </form>

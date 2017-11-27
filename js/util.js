@@ -7,3 +7,13 @@ $(document).ready(function(){
         }        
     });
 });
+
+$(document).ready(function(){
+    $(".novoPedido").click(function(){
+        if($(".formNovoPedido").css('display') == 'block'){
+            $(".formNovoPedido").css('display','none');
+        } else {
+            $(".formNovoPedido").css('display','block');
+        }        
+    });
+});
